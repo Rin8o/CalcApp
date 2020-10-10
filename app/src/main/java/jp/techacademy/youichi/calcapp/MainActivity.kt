@@ -1,6 +1,7 @@
 package jp.techacademy.youichi.calcapp
 
 import android.support.v7.app.AppCompatActivity
+import android.support.design.widget.Snackbar
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
@@ -47,7 +48,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
         else {
             // どちらかがnullの場合の処理。画面が遷移しない
-            Log.d("MainActivity","Log-null")
+            Snackbar.make(textView1, "Please Enter the Number.", Snackbar.LENGTH_SHORT).show()
+            // Snackbarに入力を促すメッセージを表示
         }
     }
 }
